@@ -1,0 +1,625 @@
+body,
+h2 {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 第一页布局 */
+
+.sectionA {
+    background-color: #041527;
+}
+
+
+/* 区域1的后代元素布局 */
+
+
+/* 插件会帮助我们加多一个 div 所以这里 再加多一级div即可 */
+
+.sectionA>div {
+    position: relative;
+}
+
+.sectionA>div>.bg {
+    width: 1200px;
+    height: 732px;
+    position: absolute;
+    background: url('../images/first_bg.png')no-repeat center;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.sectionA>div>.word1 {
+    width: 718px;
+    height: 190px;
+    position: absolute;
+    background: url('../images/first_word01.png') no-repeat center;
+    top: 100px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+.sectionA>div>.word2 {
+    width: 600px;
+    height: 128px;
+    position: absolute;
+    background: url('../images/first_word02.png') no-repeat center;
+    top: 290px;
+    left: 50%;
+    margin-left: -249px;
+}
+
+.sectionA>div>.word3 {
+    width: 810px;
+    height: 82px;
+    position: absolute;
+    background: url('../images/first_word03.png') no-repeat center;
+    top: 418px;
+    left: 50%;
+    margin-left: -405px;
+}
+
+
+/* 区域1的旋转的圈 */
+
+.sectionA>div>.web {
+    width: 214px;
+    height: 214px;
+    position: absolute;
+    top: 100px;
+    right: 75px;
+}
+
+.sectionA>div>.web>.circle {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url('../images/first_web.png')no-repeat center;
+}
+
+.sectionA>div>.web>p {
+    font-size: 50px;
+    font-weight: 900;
+    position: absolute;
+    top: -10px;
+    left: 60px;
+}
+
+
+/* 区域A 旋转的 圆圈 */
+
+@keyframes rotate {
+    from {}
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.sectionA>div>.web>.circle {
+    animation: rotate 2s infinite linear;
+}
+
+
+/* 第二页布局 */
+
+.sectionB {
+    background-color: #041527;
+}
+
+.sectionB>div>.title {
+    width: 860px;
+    height: 140px;
+    margin: 0 auto;
+    background: url('../images/hd_bg.png')no-repeat bottom left;
+}
+
+.sectionB>div>.title>h2 {
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 4px solid white;
+}
+
+
+/* 区域2的学员区域 */
+
+.sectionB>div>.student {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 30px;
+}
+
+
+/* 每一个li */
+
+.sectionB>div>.student>li {}
+
+
+/* li中的div 挥手的图片 */
+
+.sectionB>div>.student>li>div {
+    width: 269px;
+    height: 353px;
+    background: url('../images/box1_bg.jpg')no-repeat center;
+}
+
+
+/* 图片中的 标题 */
+
+.sectionB>div>.student>li>div>h3 {
+    color: skyblue;
+    font-size: 26px;
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+
+/* 图片中的 内容 */
+
+.sectionB>div>.student>li>div>p {
+    font-size: 18px;
+    color: white;
+    padding-left: 20px;
+    margin: 0;
+}
+
+
+/* 图片下方的 标题 */
+
+.sectionB>div>.student>li>h3 {
+    color: goldenrod;
+    text-align: center;
+    font-size: 24px;
+    margin: 0;
+}
+
+
+/* 图片下方的内容 */
+
+.sectionB>div>.student>li>p {
+    font-size: 12px;
+    color: white;
+    text-align: center;
+    margin: 0;
+}
+
+
+/* 页面2 学员 鼠标 hover 切换为 举手 */
+
+.sectionB>div>.student>li>div:hover {
+    background: url('../images/box1_bg4.gif')no-repeat center;
+}
+
+
+/* 第三页布局 */
+
+.sectionC {
+    /*background-color: orange;*/
+    background: url('../images/third_bg.jpg')no-repeat center/cover;
+}
+
+
+/* 标题区域 */
+
+.sectionC>div>.title {
+    width: 860px;
+    height: 140px;
+    margin: 0 auto;
+    background: url('../images/hd_bg.png')no-repeat bottom left;
+}
+
+.sectionC>div>.title>h2 {
+    color: white;
+    font-size: 60px;
+    font-weight: 900;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 4px solid white;
+}
+
+
+/* 中间区域的布局 */
+
+.sectionC>div>.inner {
+    height: 354px;
+    background: url('../images/thrid_inner.png')no-repeat center;
+    margin-top: 100px;
+}
+
+.sectionC>div>.inner>.list {
+    padding-top: 15px;
+}
+
+.sectionC>div>.inner>.list>li {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px 0;
+    padding: 0 110px;
+}
+
+.sectionC>div>.inner>.list>li>a {
+    width: 182px;
+    height: 28px;
+    padding: 20px;
+    display: block;
+    background: url('../images/list1.png')no-repeat center, #03EFFC;
+}
+
+.sectionC>div>.inner {
+    position: relative;
+}
+
+.sectionC>div>.inner>.lessons {
+    width: 555px;
+    height: 276px;
+    position: absolute;
+    left: 50%;
+    margin-left: -277.5px;
+    top: 40px;
+}
+
+.sectionC>div>.inner>.lessons>li {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(1) {
+    background: url('../images/list_con1.png') no-repeat center;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(2) {
+    background: url('../images/list_con2.png') no-repeat center;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(3) {
+    background: url('../images/list_con3.png') no-repeat center;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(4) {
+    background: url('../images/list_con4.png') no-repeat center;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(5) {
+    background: url('../images/list_con5.png') no-repeat center;
+}
+
+.sectionC>div>.inner>.lessons>li:nth-child(6) {
+    background: url('../images/list_con6.png') no-repeat center;
+}
+
+
+/* li标签中的a 高亮效果 */
+
+.sectionC>div>.inner>.list>li>a.active {
+    background-color: yellow;
+}
+
+
+/* 第四页布局 */
+
+.sectionD {
+    background-color: #E4EBE9;
+}
+
+.sectionD>div {
+    /* 超出部分隐藏 */
+    overflow: hidden;
+}
+
+.sectionD>div>.title {
+    height: 140px;
+    width: 860px;
+    margin: 0 auto;
+    background: url('../images/hd_bg01.png')no-repeat bottom left;
+}
+
+.sectionD>div>.title>h2 {
+    text-align: center;
+    font-weight: 900;
+    font-size: 60px;
+    color: #009199;
+    border-bottom: 4px solid #05B5BF;
+    padding-top: 20px;
+}
+
+
+/* 手风琴菜单 */
+
+.sectionD>div>.wind {
+    width: 960px;
+    height: 600px;
+    margin: 0 auto;
+    border-radius: 20px;
+    background-color: hotpink;
+    position: relative;
+    overflow: hidden;
+}
+
+
+/* 手风琴中的每一个子元素 */
+
+.sectionD>div>.wind>div {
+    position: absolute;
+    border-radius: 20px;
+    display: flex;
+    width: 760px;
+    height: 100%;
+    left: 0px;
+    padding: 30px;
+    /* 添加过渡效果  */
+    transition: all .5s;
+}
+
+.sectionD>div>.wind>div:nth-child(1) {
+    background-color: yellow;
+}
+
+.sectionD>div>.wind>div:nth-child(2) {
+    background-color: yellowgreen;
+}
+
+.sectionD>div>.wind>div:nth-child(3) {
+    background-color: green;
+    /* 特殊处理 弹性布局的 排布 */
+    flex-direction: column;
+}
+
+.sectionD>div>.wind>div:nth-child(4) {
+    background-color: darkgreen;
+}
+
+.sectionD>div>.wind>div:nth-child(5) {
+    background-color: red;
+}
+
+.sectionD>div>.wind>div:nth-child(6) {
+    background-color: purple;
+}
+
+.sectionD>div>.wind>div:nth-child(7) {
+    background-color: skyblue;
+}
+
+
+/* 左边的示意图 */
+
+.sectionD>div>.wind>div>img {}
+
+
+/* 右边的内容区域 */
+
+.sectionD>div>.wind>div>div {
+    padding: 20px 20px 0;
+}
+
+
+/* 内容区域的标题 */
+
+.sectionD>div>.wind>div>div>h4 {
+    text-align: center;
+}
+
+
+/* 内容区域的文本 */
+
+.sectionD>div>.wind>div>div>p {}
+
+
+/* 区域5 */
+
+.sectionE {
+    background: url('../images/fifth_bg.jpg')no-repeat center/cover;
+}
+
+.sectionE>div {}
+
+.sectionE>div>.title {
+    height: 140px;
+    width: 860px;
+    background: url('../images/hd_bg.png')no-repeat bottom left;
+    margin: 0 auto;
+}
+
+.sectionE>div>.title>h2 {
+    font-size: 60px;
+    font-weight: 900;
+    color: white;
+    border-bottom: 4px solid white;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.sectionE>div>.tit {
+    /*width: 1090px;*/
+    margin-top: 20px;
+    height: 64px;
+    background: url('../images/fifth_tit.png')no-repeat center;
+}
+
+.sectionE>div>.table {
+    /*height: 560px;*/
+    height: 233.3333px;
+    /*background: url('../images/fifth_table.png')no-repeat center top;*/
+    background: url('../images/fifth_table.png')no-repeat center top ;
+    /* 添加动画 */
+    /*animation: scroll 5s infinite linear;*/
+    animation: scroll 10s infinite;
+}
+
+
+/* 轮播 就业数据的 动画效果 */
+
+@keyframes scroll {
+    /* 开始位置 是 图片的 中心点 */
+    20% {
+        background-position-y: -46.66px
+    }
+    40% {
+        background-position-y: -93.2px
+    }
+    60% {
+        background-position-y: -139.8px
+    }
+    80% {
+        background-position-y: -186.4px
+    }
+
+    /* 末尾的时候 刚好是 播完了 一张图片 */
+    100% {
+        background-position-y: -233.3px
+    }
+}
+
+
+/* 动画效果 页面1 */
+
+
+/* 默认的样式 */
+
+.sectionA .bg {
+    transform: translateY(100%);
+}
+
+.sectionA .word1 {
+    transform: translateX(-200%);
+}
+
+.sectionA .word2 {
+    transform: translateX(200%);
+}
+
+
+/* 全部设置 overhidden */
+
+.section>div {
+    overflow: hidden;
+}
+
+
+/* 添加动画以后 的样式 */
+
+.sectionA.animation .bg {
+    transition: all .5s;
+    transform: none;
+}
+
+.sectionA.animation .word1 {
+    transition: all .5s;
+    transform: none;
+}
+
+.sectionA.animation .word2 {
+    transition: all .5s;
+    transform: none;
+}
+
+
+/* 区域2动画 */
+
+
+/* 默认的 样子 */
+
+.sectionB .title {
+    transform: translateY(-100%);
+}
+
+.sectionB .student li {
+    transform: translateY(200%);
+}
+
+
+/* 添加动画效果 */
+
+.sectionB.animation .title {
+    transition: all .5s;
+    transform: none;
+}
+
+.sectionB.animation .student li {
+    transform: none;
+}
+
+.sectionB.animation .student li:nth-child(1) {
+    transition: all .5s .5s;
+}
+
+.sectionB.animation .student li:nth-child(2) {
+    transition: all .5s .7s;
+}
+
+.sectionB.animation .student li:nth-child(3) {
+    transition: all .5s .9s;
+}
+
+.sectionB.animation .student li:nth-child(4) {
+    transition: all .5s 1.1s;
+}
+
+
+/* 区域3 动画效果 */
+
+.sectionC .title {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.sectionC .inner {
+    transform: translateY(200%);
+    opacity: 0;
+}
+
+
+/* 区域3 动画的样式 */
+
+.sectionC.animation .title {
+    transform: none;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.sectionC.animation .inner {
+    transform: none;
+    opacity: 1;
+    transition: all .5s;
+}
+
+
+/* 区域4 */
+
+
+/* 默认样式 */
+
+.sectionD .title {
+    transform: translateY(-100%);
+    opacity: 0;
+}
+
+.sectionD .wind {
+    transform: translateY(200%);
+    opacity: 0;
+}
+
+
+/* 动画样式 */
+
+.sectionD.animation .title {
+    transform: none;
+    opacity: 1;
+    transition: all .5s;
+}
+
+.sectionD.animation .wind {
+    transform: none;
+    opacity: 1;
+    transition: all .5s;
+}

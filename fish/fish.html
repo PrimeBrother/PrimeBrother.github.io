@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+  <meta charset="UTF-8">
+  <title>我钓的哦！</title>
+  <style>
+    body {
+      background-color: skyblue;
+      padding: 100px;
+    }
+
+    .fishFamily {
+      width: 172px;
+      height: 126px;
+      margin: 100px auto;
+      /*border: 1px solid #000;*/
+      /* 设置变换的 中心点 */
+      transform-origin: bottom right;
+      
+    }
+
+    .fish-box {
+      width: 172px;
+      height: 126px;
+      background: url('img/fish.png')no-repeat;
+      /*animation: swim 0.8s steps(8) infinite;*/
+      /* 如果要设置多个 使用逗号分隔即可 */
+      animation: swim 0.8s steps(8) infinite, walk 10s linear infinite;
+      transition: all 1s;
+      position: absolute;
+
+      /* transform  有一个 变换的 中心点 默认是自己的正中心 */
+      transform-origin: bottom right;
+    }
+
+    .fishFamily:hover .fish-box:nth-child(1) {
+      transform: rotate(60deg);
+    }
+
+    .fishFamily:hover .fish-box:nth-child(2) {
+      transform: rotate(120deg);
+    }
+
+    .fishFamily:hover .fish-box:nth-child(3) {
+      transform: rotate(180deg);
+    }
+
+    .fishFamily:hover .fish-box:nth-child(4) {
+      transform: rotate(240deg);
+    }
+
+    .fishFamily:hover .fish-box:nth-child(5) {
+      transform: rotate(300deg);
+    }
+
+    .fishFamily:hover .fish-box:nth-child(6) {
+      transform: rotate(360deg);
+    }
+
+    .fishFamily:hover {
+      transition: all 6s 1.2s linear;
+      transform: rotate(360deg);
+    }
+
+    @keyframes swim {
+      to {
+        /* 最终 停留的样式 */
+        background-position-y: -1008px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="fishFamily">
+    <div class="fish-box"></div>
+    <div class="fish-box"></div>
+    <div class="fish-box"></div>
+    <div class="fish-box"></div>
+    <div class="fish-box"></div>
+    <div class="fish-box"></div>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,104 @@
+body {
+    margin: 0;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 第一页布局 */
+
+.sectionA {
+    background-color: #041527;
+}
+
+
+/* 区域1的后代元素布局 */
+
+
+/* 插件会帮助我们加多一个 div 所以这里 再加多一级div即可 */
+
+.sectionA>div {
+    position: relative;
+}
+
+.sectionA>div>.bg {
+    width: 1200px;
+    height: 732px;
+    position: absolute;
+    background: url('../images/first_bg.png')no-repeat center;
+    left: 50%;
+    margin-left: -600px;
+}
+
+.sectionA>div>.word1 {
+    width: 718px;
+    height: 190px;
+    position: absolute;
+    background: url('../images/first_word01.png') no-repeat center;
+    top: 100px;
+    left: 50%;
+    margin-left: -400px;
+}
+
+.sectionA>div>.word2 {
+    width: 600px;
+    height: 128px;
+    position: absolute;
+    background: url('../images/first_word02.png') no-repeat center;
+    top: 290px;
+    left: 50%;
+    margin-left: -249px;
+}
+
+.sectionA>div>.word3 {
+    width: 810px;
+    height: 82px;
+    position: absolute;
+    background: url('../images/first_word03.png') no-repeat center;
+    top: 418px;
+    left: 50%;
+    margin-left: -405px;
+}
+
+/* 区域1的旋转的圈 */
+.sectionA>div>.web{
+  width: 214px;
+  height: 214px;
+  position: absolute;
+  top:100px;
+  right:75px;
+}
+.sectionA>div>.web>.circle{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('../images/first_web.png')no-repeat center;
+}
+.sectionA>div>.web>p{
+  font-size:50px;
+  font-weight: 900;
+  position: absolute;
+  top:-10px;
+  left:60px;
+}
+
+.sectionB {
+    background-color: yellowgreen;
+}
+
+.sectionC {
+    background-color: orange;
+}
+
+.sectionD {
+    background-color: lightseagreen;
+}
+
+.sectionE {
+    background-color: goldenrod;
+}
