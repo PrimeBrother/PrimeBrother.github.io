@@ -88,12 +88,15 @@ npm是1个工具, 依赖于node。
         "moviecat.home",
         "moviecat.in_theaters",
         "moviecat.details",
+        "moviecat.in_theaters",
+        "moviecat.details",
+        "moviecat.coming_soon",
+        "moviecat.top250",
         "ngRoute"]);
     //2.进行配置.
     moviecat.config(["$locationProvider",function($locationProvider){
         //1.配置锚链接的前置符号.
         $locationProvider.hashPrefix("");
     }]);
-
-
+    
 })(angular);

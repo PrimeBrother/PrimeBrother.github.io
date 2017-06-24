@@ -22,7 +22,6 @@
             callback: function (data) {
                 $scope.movie = data;
                 $scope.isShow = false;
-                console.log(data);
                 $scope.$apply();
             }
         });
